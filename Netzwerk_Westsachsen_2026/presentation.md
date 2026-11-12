@@ -323,16 +323,13 @@ Klassisch mit zentralem Server               Direkt von Browser zu Browser
 
 ## Live-Demo: ein Remote-Labor in fünf Minuten
 
-> __Zücken Sie Ihr Smartphone, Tablet oder Ihren Laptop!__
-
     --{{0}}--
 Ich mache jetzt meinen Laptop zu einer Station. Hier am USB-Anschluss steckt ein Arduino Nano ESP32, darüber hängt eine Webcam. Genau so könnte ein LabSet an einer Schule aussehen.
 
 1. Die Laborbeschreibung `esp32_lab_de.yaml` wird in Edrys lite geladen.
 2. Ein zweites Browserfenster wird zur __Station__: Arduino Nano ESP32 per USB, Webcam auf das Board, ein Docker-Container mit `arduino-cli`.
-3. Sie betreten den Klassenraum über den QR-Code unten.
-4. An der Station ändern Sie den C++-Code und drücken auf Run. Der Code wird kompiliert und auf das echte Board geladen.
-5. Sie sehen die RGB-LED im Kamerabild und die Ausgaben im seriellen Monitor.
+3. Im Klassenraum wird der C++-Code geändert und auf Run gedrückt. Der Code wird kompiliert und auf das echte Board geladen.
+4. Wir sehen die RGB-LED im Kamerabild und die Ausgaben im seriellen Monitor.
 
     {{1}}
 <section>
@@ -353,15 +350,6 @@ docker run -d --name edrys-station \
 
     --{{0}}--
 Dieser eine Befehl ist die ganze Stationssoftware. Der Container bringt die Arduino-Werkzeuge und einen kleinen Terminal-Server mit. Der serielle Anschluss und der USB-Bus werden durchgereicht, damit der Container das Programm auf das Board laden kann.
-
-Link zum Klassenraum der Demo:
-
-<script input="text" placeholder="Klassenraum-URL hier einfügen" aria-label="Klassenraum-URL für die Live-Demo" style="display: block">
-let url = "@input".trim()
-url === ""
-  ? "Fügen Sie die Klassenraum-URL ein, um den QR-Code anzuzeigen."
-  : "HTML: <img src='https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=" + encodeURIComponent(url) + "' alt='QR-Code für den Klassenraum' width='300' height='300'>"
-</script>
 
 ## Laufende Labore in Freiberg
 
