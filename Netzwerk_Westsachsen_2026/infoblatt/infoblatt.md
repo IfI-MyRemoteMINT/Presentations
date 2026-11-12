@@ -33,8 +33,8 @@ einen Link: **keine Installation, keine Anmeldung, kein eigener Server.**
   {\small LabSets werden im Projekt beschafft und bleiben an der Schule. Keine Benutzerkonten, keine zentrale Datenhaltung. Anerkennung als BELL oder Komplexe Lernleistung möglich.}
 \end{minipage}\hfill
 \begin{minipage}[t]{0.31\textwidth}\raggedright
-  {\color{tubafblue}\bfseries Für Forschende}\\[0.2em]
-  {\small Datenschutzsensible Begleitforschung, offene Software und Laborbeschreibungen. Wir suchen Kooperationen, besonders mit der Fachdidaktik.}
+  {\color{tubafblue}\bfseries Unser Vorgehen}\\[0.2em]
+  {\small Gemeinsam mit den Partnerschulen: Bedarfe per Fragebogen und Interview erheben, Demo-Setups zeigen, Labore erproben und verbessern, Wirkung durch Befragungen prüfen.}
 \end{minipage}\par
 \vspace{0.3em}
 ```

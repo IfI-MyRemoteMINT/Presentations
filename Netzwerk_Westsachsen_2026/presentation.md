@@ -449,36 +449,26 @@ Diese Labore stammen aus unserer Hochschullehre. Die Schulvarianten mit gestufte
 | __Anerkennung__            | Arbeit mit LabSets als BELL, Komplexe Lernleistung oder Projektarbeit; ein Konzept dafür entsteht im Projekt |
 | __Nach 2028__              | OER bleiben frei verfügbar, LabSets bleiben an den Schulen, Workshops sollen in die Fortbildungen des LaSuB übergehen, das Institut für Informatik bietet weiter Fortbildungen an |
 
-## Für Forschende: Begleitforschung und Kooperation
+## Wie wir vorgehen
 
-<section class="flex-container">
+> MyRemoteMINT entwickelt nicht am Schreibtisch, sondern gemeinsam mit den Partnerschulen und in mehreren Runden.
 
-<div class="flex-child" style="min-width: 250px;">
+| Schritt                          | Was wir tun                                                                                                   |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| __1. Lehrpläne auswerten__       | Anknüpfungspunkte in den sächsischen Lehrplänen für sechs Fächer und drei Schularten (abgeschlossen)          |
+| __2. Bedarfe erheben__           | an den Partnerschulen: kurzer Online-Fragebogen zu Schule, Unterricht und Ausstattung, danach ein Interview mit Lehrkräften |
+| __3. Demo-Setups zeigen__        | im Interview und in Workshops ein Remote-Labor live vorführen, mit Fachkarten zu Beispielexperimenten je Fach |
+| __4. Erproben und verbessern__   | Schulvarianten der Labore und LabSet-Prototypen mit Lernenden und Lehrkräften testen: Was ist verständlich, wo hakt die Technik? |
+| __5. Wirkung prüfen__            | Befragungen vor und nach der Arbeit mit den Laboren, Interviews, datenschutzsensibel erfasste Nutzungsdaten   |
 
-__Wissenschaftliche Begleitung im Projekt__
+    {{1}}
+<section>
 
-- datenschutzsensible Evaluation mit Fragebögen, Interviews und Nutzungsdaten
-- Befragungen der Lernenden vor und nach der Arbeit mit den Laboren
-- Usability-Studien zu Edrys lite mit Lernenden und Lehrkräften
-- Veröffentlichung auf Fachtagungen, z. B. DELFI und GI-Fachtagung Bildungstechnologien
+__Zeitplan:__ Planung (Monate 1–3) → Umsetzung (4–12) → Testen und Iteration (13–20) → Abschluss und Verstetigung (21–24)
 
-</div>
-
-<div class="flex-child" style="min-width: 250px;">
-
-__Was wir als Basis anbieten__
-
-- offene Software und offene Laborbeschreibungen: Studien lassen sich an anderen Standorten wiederholen
-- Module für Nutzungs- und Codeprotokolle, z. B. anonymisierte Code-Änderungen an der Station
-- 137 Lehrplananker als Ausgangspunkt für fachdidaktische Fragen
-- Interesse an Kooperation, besonders mit der Fachdidaktik in Biologie, Chemie und Physik
-
-</div>
+__Woran wir uns messen:__ mindestens 10 aktive Schulpartnerschaften, 15 veröffentlichte OER, 25 Lehrkräfte im Netzwerk, und mindestens die Hälfte der Lernenden berichtet von gestiegener Motivation.
 
 </section>
-
-<!-- class="reference" -->
-> __Bisherige Arbeiten:__ I. Aubel et al., _Adaptable Digital Labs – Motivation and Vision of the CrossLab Project_, GeCon 2022 · A. Hawlitschek, S. Berndt, S. Zug, A. Dietrich, _Iterative Adaption eines Remote-Labors unter Berücksichtigung des Feedbacks der Studierenden_, wbv
 
 ## Mitmachen
 
@@ -504,9 +494,8 @@ __Was wir uns wünschen__
 - Ideen für Experimente aus Ihrem Unterricht
 - Schulen, die ein eigenes LabSet aufbauen und für andere öffnen
 - Lehrkräfte aller MINT-Fächer, nicht nur Informatik
-- Forschende, die mit uns Fragen zu Remote-Laboren in der Schule untersuchen
 
-__Der erste Schritt:__ Sprechen Sie uns an. Wir klären Ihre Fächer, Themen und Klassenstufen und laden Sie zu einem Workshop ein.
+__Der erste Schritt:__ Sprechen Sie uns an. Wir klären mit einem kurzen Fragebogen und einem Gespräch Ihre Fächer, Themen und Klassenstufen und laden Sie zu einem Workshop ein.
 
 </div>
 
