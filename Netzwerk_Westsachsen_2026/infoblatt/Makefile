@@ -5,7 +5,7 @@
 #   make qr     -> erzeugt die QR-Codes neu
 #   make clean  -> entfernt das PDF
 
-QRENCODE := qrencode --type=PNG32 -s 12 -m 2 --foreground=004F9Fff --background=ffffffff
+QRENCODE := qrencode --type=PNG32 -s 12 -m 2 --foreground=0069B4ff --background=ffffffff
 
 all: infoblatt.pdf
 
