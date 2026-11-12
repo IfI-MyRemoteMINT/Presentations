@@ -49,11 +49,10 @@ link:     style.css
 Eigene Labore für Schülerinnen und Schüler im ländlichen Raum
 ------------------------------------------------------------
 
-![Remote-Labor-Stationen im RoboLab der TU Bergakademie Freiberg](./robolab_stationen.jpg "Remote-Labor-Stationen im RoboLab der TU Bergakademie Freiberg")
+![Remote-Labor-Stationen im RoboLab der TU Bergakademie Freiberg](./robolab_stationen.jpg)<!-- style="max-height: 28vh; width: auto; display: block; margin: 0 auto;" -->
 
 <!-- style="font-weight: bold" -->
 Prof. Dr. Sebastian Zug (Institut für Informatik), Prof. Dr. Martin Bertau (Institut für Technische Chemie) \
-mit Dr. Ines Aubel, Florian Richter und Jihad Hyadi \
 TU Bergakademie Freiberg \
 6. Netzwerkveranstaltung „Digitale Schule Sachsen“ – Westsachsen, Schüler-Lab der WHZ Zwickau, 13. November 2026
 
