@@ -77,6 +77,8 @@ In der Schule stehen ihnen viele Hürden entgegen:
 - Die Ausstattung ist ungleich verteilt, besonders im ländlichen Raum.
 - Nach einem Workshop an der Hochschule bleibt an der Schule meist nichts zurück.
 
+Das gilt für den Calliope im Informatikunterricht ebenso wie für die Messstation im Biologieunterricht oder das Fotometer in der Chemie.
+
 </div>
 
 <div class="flex-child" style="min-width: 250px;">
@@ -141,6 +143,20 @@ So entsteht ein __verteiltes Labor-Netzwerk__: Schulen betreiben eigene Labore, 
 
 </section>
 
+    {{2}}
+<section>
+
+__Nicht nur Informatik__
+
+| Fach       | Beispiele für Remote-Labore und LabSets                                      | Stand                    |
+| ---------- | ---------------------------------------------------------------------------- | ------------------------ |
+| Informatik | Calliope mini, Arduino, fahrende Roboter                                     | Hochschullabore vorhanden |
+| Physik     | Sensorkennlinien, Distanzmessung, Analog-Digital-Wandlung                     | Hochschullabore vorhanden |
+| Biologie   | Umweltsensorik (Licht, Temperatur, pH), Gewächshaus mit Portalroboter am BSZ | Gewächshaus am BSZ vorhanden, Rest geplant |
+| Chemie     | elektrochemische Messungen, Chromatographie, Spektroskopie                   | geplant, mit der Technischen Chemie |
+
+</section>
+
 ### LabSets – von Remote zu Real
 
 <section class="flex-container">
@@ -179,6 +195,56 @@ alles unter __CC BY 4.0__ und auf Git-Plattformen veröffentlicht.
 </div>
 
 </section>
+
+### Passt das in den Lehrplan?
+
+> Wir haben die sächsischen Lehrpläne für Informatik, Physik, Chemie, Biologie, Biotechnik und Technik/Computer an Oberschule, Gymnasium und Beruflichem Gymnasium nach Anknüpfungspunkten durchsucht.
+
+<section class="flex-container">
+
+<div class="flex-child" style="min-width: 250px;">
+
+| Fach              | Anknüpfungspunkte |
+| ----------------- | ----------------: |
+| Physik            |                44 |
+| Informatik        |                38 |
+| Chemie            |                26 |
+| Biologie          |                21 |
+| Biotechnik        |                 4 |
+| Technik/Computer  |                 4 |
+| __Summe__         |           __137__ |
+
+</div>
+
+<div class="flex-child" style="min-width: 250px;">
+
+__Beispiele__
+
+- Informatik GY Kl. 7, Informatiksysteme: Calliope als EVA-System
+- Biologie OS Kl. 9, Grundlagen der Ökologie: abiotische Faktoren digital messen
+- Physik GY: verbindliche Schülerexperimente mit digitaler Messwerterfassung
+- Besondere Lernleistung (BELL) und Komplexe Lernleistung: ein eigenes LabSet bauen und für andere öffnen
+
+</div>
+
+</section>
+
+    {{1}}
+<section>
+
+__Nicht jedes Labor heißt programmieren.__ Dieselbe Hardware trägt vier Stufen:
+
+| Stufe                          | Was die Lernenden tun                                        | Typische Klassen |
+| ------------------------------ | ------------------------------------------------------------ | ---------------- |
+| 1. Beobachten                  | Experiment starten, Live-Bild und Messwerte verfolgen        | 5–8              |
+| 2. Messen und Auswerten        | Parameter variieren, Messreihen aufnehmen, Diagramme deuten  | 7–10             |
+| 3. Programmieren und Modellieren | eigenen Code schreiben, Messung und Modell vergleichen     | 9–12             |
+| 4. Gestalten                   | ein eigenes Experiment oder LabSet planen, bauen, freigeben  | 10–13            |
+
+</section>
+
+<!-- class="reference" -->
+> __Quelle:__ eigene Auswertung der Lehrplandatenbank des Schulportals Sachsen, Stand Oktober 2026. Die Zuordnung ist eine Einschätzung des Projektteams und wird mit den Partnerschulen abgestimmt.
 
 ## Die Technik: Edrys lite
 
@@ -257,10 +323,10 @@ Klassisch mit zentralem Server               Direkt von Browser zu Browser
 | Eine Station braucht ...                              | ... und keinen                          |
 | ----------------------------------------------------- | --------------------------------------- |
 | einen Rechner mit Chrome oder Edge                    | eigenen Server oder Cloud-Vertrag       |
-| das Gerät per USB und eine Webcam                     | Eingriff in das Schulnetz               |
+| das Gerät per USB und eine Webcam                     | Portfreigaben in der Firewall           |
 | bei Bedarf Docker für die Programmierwerkzeuge        | Installation auf den Schülergeräten     |
 
-> Keine Benutzerkonten, keine zentrale Datenhaltung. Damit können Schulen ihre Labore selbst betreiben.
+> Keine Benutzerkonten, keine zentrale Datenhaltung. Damit können Schulen ihre Labore selbst betreiben. In sehr restriktiven Schulnetzen prüfen wir die Verbindung gemeinsam vor Ort.
 
 </section>
 
@@ -277,7 +343,10 @@ Ich mache jetzt meinen Laptop zu einer Station. Hier am USB-Anschluss steckt ein
 4. An der Station ändern Sie den C++-Code und drücken auf Run. Der Code wird kompiliert und auf das echte Board geladen.
 5. Sie sehen die RGB-LED im Kamerabild und die Ausgaben im seriellen Monitor.
 
-Die komplette Stationssoftware, gestartet mit einem Befehl:
+    {{1}}
+<section>
+
+Für Technikinteressierte: die komplette Stationssoftware, gestartet mit einem Befehl.
 
 ``` bash
 docker run -d --name edrys-station \
@@ -288,6 +357,8 @@ docker run -d --name edrys-station \
   --device-cgroup-rule 'c 189:* rmw' \
   edryslabs/module-pyxtermjs:latest
 ```
+
+</section>
 
     --{{0}}--
 Dieser eine Befehl ist die ganze Stationssoftware. Der Container bringt die Arduino-Werkzeuge und einen kleinen Terminal-Server mit. Der serielle Anschluss und der USB-Bus werden durchgereicht, damit der Container das Programm auf das Board laden kann.
@@ -331,7 +402,9 @@ https://edrys-labs.github.io/?/classroom/sEHRNUR9TnhA8wYs
 
 ![Calliope-mini-Labor in Edrys lite](./edrys_calliope.jpg "Calliope-mini-Labor: MicroPython-Editor, Terminal und Kamerabild der Station")
 
-> Eine Station kann immer nur eine Person gleichzeitig programmieren. Für eine Klasse betreibt man mehrere gleiche Stationen parallel, und alle anderen schauen im Kamerabild zu.
+> __Und mit einer ganzen Klasse?__ Eine Station kann immer nur eine Person gleichzeitig programmieren. Deshalb arbeiten die Lernenden zuerst im Simulator und gehen dann an die Station. Mehrere gleiche Stationen laufen parallel, alle anderen schauen im Kamerabild zu. Für die zentralen Labore entsteht ein Buchungssystem.
+
+Diese Labore stammen aus unserer Hochschullehre. Die Schulvarianten mit gestuften Aufgaben entstehen im Projekt gemeinsam mit den Partnerschulen.
 
 ## Der Fahrplan
 
@@ -343,6 +416,48 @@ https://edrys-labs.github.io/?/classroom/sEHRNUR9TnhA8wYs
 
     {{1}}
 > Fortbildungen für Lehrkräfte und Lernende bietet das Institut für Informatik der TU Bergakademie Freiberg auch nach Projektende an.
+
+## Was bedeutet das für eine Schule?
+
+| Frage                      | Antwort                                                                                         |
+| -------------------------- | ----------------------------------------------------------------------------------------------- |
+| __Technik__                | Browser auf vorhandenen Geräten; für eine eigene Station ein Rechner, das Gerät und eine Webcam |
+| __Hardware__               | LabSets werden im Projekt entwickelt und beschafft und bleiben an der Schule                    |
+| __Zeit__                   | Workshops von ein bis zwei Tagen im RoboLab oder vor Ort; danach Begleitung durch das Projektteam |
+| __Datenschutz__            | keine Benutzerkonten, keine zentrale Datenhaltung, die Kamera zeigt nur das Gerät; die Evaluation ist datenschutzsensibel angelegt |
+| __Anerkennung__            | Arbeit mit LabSets als BELL, Komplexe Lernleistung oder Projektarbeit; ein Konzept dafür entsteht im Projekt |
+| __Nach 2028__              | OER bleiben frei verfügbar, LabSets bleiben an den Schulen, Workshops sollen in die Fortbildungen des LaSuB übergehen, das Institut für Informatik bietet weiter Fortbildungen an |
+
+## Für Forschende: Begleitforschung und Kooperation
+
+<section class="flex-container">
+
+<div class="flex-child" style="min-width: 250px;">
+
+__Wissenschaftliche Begleitung im Projekt__
+
+- datenschutzsensible Evaluation mit Fragebögen, Interviews und Nutzungsdaten
+- Befragungen der Lernenden vor und nach der Arbeit mit den Laboren
+- Usability-Studien zu Edrys lite mit Lernenden und Lehrkräften
+- Veröffentlichung auf Fachtagungen, z. B. DELFI und GI-Fachtagung Bildungstechnologien
+
+</div>
+
+<div class="flex-child" style="min-width: 250px;">
+
+__Was wir als Basis anbieten__
+
+- offene Software und offene Laborbeschreibungen: Studien lassen sich an anderen Standorten wiederholen
+- Module für Nutzungs- und Codeprotokolle, z. B. anonymisierte Code-Änderungen an der Station
+- 137 Lehrplananker als Ausgangspunkt für fachdidaktische Fragen
+- Interesse an Kooperation, besonders mit der Fachdidaktik in Biologie, Chemie und Physik
+
+</div>
+
+</section>
+
+<!-- class="reference" -->
+> __Bisherige Arbeiten:__ I. Aubel et al., _Adaptable Digital Labs – Motivation and Vision of the CrossLab Project_, GeCon 2022 · A. Hawlitschek, S. Berndt, S. Zug, A. Dietrich, _Iterative Adaption eines Remote-Labors unter Berücksichtigung des Feedbacks der Studierenden_, wbv
 
 ## Mitmachen
 
@@ -367,6 +482,10 @@ __Was wir uns wünschen__
 - Lehrkräfte, die Remote-Labore im Unterricht, in AGs oder an Projekttagen erproben
 - Ideen für Experimente aus Ihrem Unterricht
 - Schulen, die ein eigenes LabSet aufbauen und für andere öffnen
+- Lehrkräfte aller MINT-Fächer, nicht nur Informatik
+- Forschende, die mit uns Fragen zu Remote-Laboren in der Schule untersuchen
+
+__Der erste Schritt:__ Sprechen Sie uns an. Wir klären Ihre Fächer, Themen und Klassenstufen und laden Sie zu einem Workshop ein.
 
 </div>
 
@@ -375,7 +494,7 @@ __Was wir uns wünschen__
     {{1}}
 <section>
 
-Welches Experiment würden Sie gern aus der Ferne nutzen oder mit anderen Schulen teilen?
+Welches Experiment aus Ihrem Fach würden Sie gern aus der Ferne nutzen oder mit anderen Schulen teilen?
 
 [[___ ___ ___]]
 

@@ -15,22 +15,29 @@ Zeit und Ausstattung der Schule, und lässt die Hardware dauerhaft an den Schule
 
 ## Die Idee
 
-Auf Basis der an der TU Bergakademie Freiberg entwickelten Open-Source-Plattform
-**Edrys lite** entsteht ein verteiltes Labor-Netzwerk aus
+Auf Basis der Open-Source-Plattform **Edrys lite** aus Freiberg entsteht ein
+verteiltes Labor-Netzwerk aus **Remote-Laboren** (zentral an der TU Bergakademie
+Freiberg und am BSZ „Julius Weisbach“, an den Schulen oder zu Hause), **LabSets**
+(Hardware-Baukästen, die in Workshops entstehen und an der Schule bleiben) und
+**offenen Materialien** unter CC BY 4.0. Lernende brauchen nur einen Browser und
+einen Link: **keine Installation, keine Anmeldung, kein eigener Server.**
 
-- **Remote-Laboren**: reale Versuchsaufbauten (Robotik, Mikrocontroller,
-  Umweltsensorik, elektrochemische Messungen), gesteuert über den Browser, mit
-  Live-Video und echten Messdaten. Zentral an der TU Bergakademie Freiberg und am
-  BSZ „Julius Weisbach“, partizipativ an den Schulen oder individuell zu Hause.
-- **LabSets**: modulare Hardware-Baukästen, die in Workshops im RoboLab Freiberg
-  entstehen, an der Schule bleiben oder mit nach Hause gehen und per
-  Remote-Zugriff auch für andere geöffnet werden können.
-- **Offenen Materialien**: Bauanleitungen, Laborbeschreibungen, Aufgaben und
-  Versuche unter CC BY 4.0, schulübergreifend nutzbar und anpassbar.
-
-Lernende brauchen nur einen Browser und einen Link: **keine Installation, keine
-Anmeldung, kein eigener Server.** Lehrkräfte erhalten einsatzfertige Labore mit
-Begleitmaterial, Workshops und Begleitung durch das Projektteam.
+```{=latex}
+\vspace{0.2em}
+\noindent\begin{minipage}[t]{0.31\textwidth}\raggedright
+  {\color{tubafblue}\bfseries Für Lehrkräfte}\\[0.2em]
+  {\small Labore für Informatik, Physik, Chemie und Biologie, gestuft vom Beobachten bis zum eigenen Experiment. 137 Anknüpfungspunkte in den sächsischen Lehrplänen. Workshops und Begleitung.}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.31\textwidth}\raggedright
+  {\color{tubafblue}\bfseries Für Schulleitungen}\\[0.2em]
+  {\small LabSets werden im Projekt beschafft und bleiben an der Schule. Keine Benutzerkonten, keine zentrale Datenhaltung. Anerkennung als BELL oder Komplexe Lernleistung möglich.}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.31\textwidth}\raggedright
+  {\color{tubafblue}\bfseries Für Forschende}\\[0.2em]
+  {\small Datenschutzsensible Begleitforschung, offene Software und Laborbeschreibungen. Wir suchen Kooperationen, besonders mit der Fachdidaktik.}
+\end{minipage}\par
+\vspace{0.3em}
+```
 
 ## Jetzt ausprobieren
 
@@ -57,7 +64,7 @@ Begleitmaterial, Workshops und Begleitung durch das Projektteam.
 ## Mitmachen
 
 Ob einzelne Experimente im Unterricht, eine AG, ein Projekttag oder ein eigenes
-LabSet: Wir suchen Schulen, die mitgestalten. Sprechen Sie uns gern an.
+LabSet: Wir suchen Schulen aus allen MINT-Fächern, die mitgestalten. Sprechen Sie uns gern an.
 
 ```{=latex}
 \vfill
