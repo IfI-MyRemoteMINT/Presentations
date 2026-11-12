@@ -1,0 +1,140 @@
+\documentclass[11pt,a4paper]{article}
+
+%% ---- TUBAF-Stil: Onepager / Letter of Intent ----
+%% Erwartet xelatex (für Systemschriften).
+
+\usepackage{fontspec}
+\usepackage[ngerman]{babel}
+\usepackage[a4paper,top=2.6cm,bottom=2.2cm,left=2.2cm,right=2.2cm,headheight=14pt]{geometry}
+\usepackage{xcolor}
+\usepackage{graphicx}
+%% Suchpfade fuer Grafiken: zentrale Logos + lokale QR-Codes.
+%% (Aufruf aus dem Ordner infoblatt/ heraus.)
+\graphicspath{{./}{qr/}}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{calc}
+%% Hilfsmakro, das pandoc fuer longtable-Spaltenbreiten erwartet:
+\providecommand{\real}[1]{#1}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{tikz}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+%% ---- TUBAF-Hausfarben ----
+\definecolor{tubafblue}{HTML}{004F9F}   % TU Bergakademie Freiberg Blau
+\definecolor{tubafgrey}{HTML}{595959}
+\definecolor{lightgrey}{HTML}{F2F4F7}
+\definecolor{rulegrey}{HTML}{D0D5DD}
+
+%% ---- Schriften (Lato als freie Annaeherung an die TUBAF-Hausschrift) ----
+\defaultfontfeatures{Ligatures=TeX}
+\IfFontExistsTF{Lato}{%
+  \setmainfont{Lato}[
+    UprightFont = *-Regular,
+    BoldFont    = *-Bold,
+    ItalicFont  = *-Italic,
+    BoldItalicFont = *-BoldItalic ]
+}{%
+  \setmainfont{TeX Gyre Heros}%
+}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.42em}
+
+%% ---- Hyperlinks ----
+\hypersetup{
+  colorlinks=true,
+  linkcolor=tubafblue,
+  urlcolor=tubafblue,
+  pdftitle={$title$ -- Onepager und Letter of Intent},
+  pdfauthor={TU Bergakademie Freiberg}
+}
+
+%% ---- Kopf mit Logo und Farbband ----
+%% Oben rechts steht das offizielle TUBAF-Logo auf Weiss, darunter ein
+%% blaues Farbband mit dem Titel (weiss auf blau).
+\newcommand{\bannertitle}{$title$}
+\newcommand{\bannersubtitle}{$subtitle$}
+\newcommand{\bannerprojekt}{$projekt$}
+\newcommand{\headerbanner}{%
+\begin{tikzpicture}[remember picture,overlay]
+  %% Blaues Farbband oben
+  \fill[tubafblue]
+    (current page.north west)
+    rectangle ([yshift=-3.7cm]current page.north east);
+  %% Weisses TUBAF-Logo rechts im Band
+  \node[anchor=east,inner sep=0pt]
+    at ([xshift=-2.2cm,yshift=-1.85cm]current page.north east)
+    {\includegraphics[height=1.5cm]{TUBAF_Logo_weiss.pdf}};
+  %% Titelblock weiss, links am Satzspiegel
+  \node[anchor=north west,text=white,inner sep=0pt]
+    at ([xshift=2.2cm,yshift=-0.85cm]current page.north west)
+    {\begin{minipage}{0.62\textwidth}
+       {\fontsize{23}{26}\selectfont\bfseries\bannertitle}\\[3pt]
+       {\large\bannersubtitle}\\[7pt]
+       {\footnotesize\bannerprojekt}
+     \end{minipage}};
+\end{tikzpicture}%
+%% Platz reservieren, damit der Inhalt unter dem Farbband beginnt
+\vspace*{1.65cm}
+}
+
+%% ---- Kopf- und Fusszeile ----
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\footrule}{\hbox to\headwidth{\color{rulegrey}\leaders\hrule height \footrulewidth\hfill}}
+\fancyfoot[L]{\footnotesize\color{tubafgrey} TU Bergakademie Freiberg --- MyRemoteMINT}
+\fancyfoot[R]{\footnotesize\color{tubafgrey} CC BY 4.0}
+
+%% ---- Ueberschriften ----
+\titleformat{\section}{\color{tubafblue}\Large\bfseries}{}{0pt}{}
+\titlespacing*{\section}{0pt}{0.7em}{0.2em}
+\titleformat{\subsection}{\color{tubafblue}\large\bfseries}{}{0pt}{}
+\titlespacing*{\subsection}{0pt}{0.9em}{0.2em}
+
+%% ---- Tabellen huebscher ----
+\renewcommand{\arraystretch}{1.25}
+\setlength{\tabcolsep}{8pt}
+
+%% ---- Listen ----
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setlist[itemize]{leftmargin=1.4em,itemsep=0.15em,topsep=0.2em}
+\renewcommand{\labelitemi}{\textcolor{tubafblue}{\textbullet}}
+
+%% ---- Zitatblock (Box) ----
+\usepackage{mdframed}
+\newmdenv[
+  backgroundcolor=lightgrey,
+  linecolor=tubafblue,
+  linewidth=2pt,
+  topline=false,bottomline=false,rightline=false,
+  innertopmargin=8pt,innerbottommargin=8pt,
+  innerleftmargin=10pt,innerrightmargin=10pt,
+  skipabove=8pt,skipbelow=8pt
+]{quotebox}
+\renewenvironment{quote}{\begin{quotebox}}{\end{quotebox}}
+
+\begin{document}
+\thispagestyle{fancy}
+\headerbanner
+
+%% ---- Kontaktzeile (Kontakt links, Datum rechtsbuendig daneben) ----
+\noindent{\footnotesize\color{tubafgrey}%
+  \begin{minipage}[t]{0.74\textwidth}\raggedright $kontakt$\end{minipage}%
+  \hfill
+  \begin{minipage}[t]{0.24\textwidth}\raggedleft $datum$\end{minipage}%
+}
+
+\vspace{0.3em}
+{\color{rulegrey}\hrule height 0.4pt}
+\vspace{0.6em}
+
+$body$
+
+\end{document}

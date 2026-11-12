@@ -1,0 +1,173 @@
+id: Hq7Lw2ZsN4cVbT8x
+dateCreated: 1794470400
+name: Arduino Nano ESP32 Labor
+meta:
+  logo: >-
+    https://raw.githubusercontent.com/edrys-labs/lab-arduino-basics/main/logo.jpeg
+  description: >-
+    Ein erstes Remote-Labor mit einem echten Arduino Nano ESP32: C++-Code im
+    Browser schreiben, kompilieren, auf das Board laden und das Ergebnis über
+    Kamera und seriellen Monitor beobachten.
+  selfAssign: true
+  defaultNumberOfRooms: '1'
+members:
+  teacher: []
+  student: []
+modules:
+  - url: https://edrys-labs.github.io/module-markdown-it/index.html
+    config:
+      content: |-
+        # Willkommen im Remote-Labor mit dem Arduino Nano ESP32
+
+        Liebe Teilnehmerinnen und Teilnehmer,
+
+        dieses Labor gibt Ihnen direkten Zugriff auf einen echten Mikrocontroller: einen **Arduino Nano ESP32**, der an einem Laptop hier im Raum angeschlossen ist.
+
+        **So funktioniert es**
+
+        1. Öffnen Sie links im Menü die **Station**.
+        2. Ändern Sie den C++-Code im Editor und drücken Sie den **Run**-Knopf.
+        3. Die Station kompiliert den Code und lädt ihn auf das Board. Das dauert etwa 15 Sekunden.
+        4. Beobachten Sie das Board über die **Kamera** und lesen Sie seine Ausgaben im **Terminal**.
+
+        Alles läuft im Browser, Sie müssen nichts installieren. Die Station selbst ist nur ein Browserfenster und ein kleiner Docker-Container auf einem Laptop.
+
+        > Es kann immer nur eine Person das Board programmieren. Wenn gerade jemand an der Station arbeitet, warten Sie bitte kurz und schauen gemeinsam zu.
+
+        _Ihr CrossLab-Team, TU Bergakademie Freiberg_
+    studentConfig:
+      content: ''
+    teacherConfig:
+      content: ''
+    stationConfig:
+      content: ''
+    showInCustom: lobby
+    width: full
+    height: huge
+    id: 4c7e2a91-5b3d-4f08-8a6c-1e9d3b7f2a54
+  - url: https://edrys-labs.github.io/module-monaco-editor/
+    config:
+      editorId: station
+      value: |
+        // Arduino Nano ESP32: die RGB-LED ist LOW-aktiv
+        // (LOW = an, HIGH = aus)
+        const int leds[] = {LED_RED, LED_GREEN, LED_BLUE};
+        const char* namen[] = {"rot", "gruen", "blau"};
+
+        void setup() {
+          Serial.begin(115200);
+          for (int i = 0; i < 3; i++) {
+            pinMode(leds[i], OUTPUT);
+            digitalWrite(leds[i], HIGH);  // aus
+          }
+        }
+
+        void loop() {
+          for (int i = 0; i < 3; i++) {
+            digitalWrite(leds[i], LOW);   // an
+            Serial.print("Farbe: ");
+            Serial.println(namen[i]);
+            delay(700);
+            digitalWrite(leds[i], HIGH);  // aus
+          }
+        }
+      runCommand: execute
+      language: cpp
+      theme: auto
+      synchronize: true
+      readOnly: false
+      showLanguageSelector: false
+    showInCustom: station
+    width: full
+    height: huge
+    id: 8e1b5d36-2f9a-4c74-b0d3-6a2c8e4f1b97
+  - url: https://edrys-labs.github.io/module-streaming/index.html
+    stationConfig:
+      streamName: Stream 1
+      streamQuality: medium
+      video: true
+      audio: false
+      mirrorX: false
+      mirrorY: false
+      rotate: 0
+      streamMethod: webrtc
+      websocketUrl: ''
+    showInCustom: station
+    width: half
+    height: medium
+    id: 2a9f6c48-7d1e-4b35-9e82-5c0b3a7d6e19
+  - url: https://edrys-labs.github.io/module-pyxtermjs/index.html
+    config: ''
+    studentConfig: ''
+    teacherConfig: ''
+    stationConfig:
+      server: http://localhost:5000/pty
+      execute: execute
+      workflow: arduino-nano-esp32
+      port: /dev/ttyACM0
+      enable:
+        teacher: true
+        student: true
+    showInCustom: station
+    width: half
+    height: medium
+    id: 6d3c8b72-1e4f-4a96-8b05-9f2e7a1c4d38
+  - url: https://edrys-labs.github.io/module-markdown-it/index.html
+    config:
+      content: |-
+        # Aufgaben
+
+        > **Aufgabe 1**: Starten Sie den Beispielcode. Beobachten Sie die RGB-LED in der Kamera und die Farbnamen im Terminal. Passen beide zusammen?
+
+        > **Aufgabe 2**: Lassen Sie die LED schneller blinken und ergänzen Sie einen vierten Zustand, in dem alle drei Farben gleichzeitig leuchten. Welche Farbe sehen Sie?
+
+        > **Aufgabe 3**: Lassen Sie die LED `SOS` morsen (`... --- ...`): kurz = 200 ms, lang = 600 ms, Pause zwischen den Buchstaben = 600 ms. Geben Sie jeden Buchstaben auf dem seriellen Monitor aus.
+
+        > **Denkaufgabe**: Die Kamera zeigt das Board mit Verzögerung. Wie könnten Sie das tatsächliche Timing Ihres Blinkmusters messen, ohne dem Video zu vertrauen?
+
+        ## Hardware
+
+        | Bauteil          | Details                                        |
+        | ---------------- | ---------------------------------------------- |
+        | Mikrocontroller  | Espressif ESP32-S3 (u-blox NORA-W106)          |
+        | RGB-LED          | `LED_RED`, `LED_GREEN`, `LED_BLUE`, LOW-aktiv  |
+        | Eingebaute LED   | `LED_BUILTIN` (HIGH-aktiv)                     |
+        | Funk             | WLAN, Bluetooth LE                             |
+        | Werkzeuge        | `arduino-cli`, Core `arduino:esp32`            |
+
+        Weitere Informationen: [Dokumentation zum Arduino Nano ESP32](https://docs.arduino.cc/hardware/nano-esp32/)
+    studentConfig:
+      content: ''
+    teacherConfig:
+      content: ''
+    stationConfig:
+      content: ''
+    showInCustom: station
+    width: half
+    height: tall
+    id: 9b4e2c67-3a8d-4f15-a7c0-2d6f8e1b5a93
+  - url: https://edrys-labs.github.io/module-survey/index.html
+    config: ''
+    studentConfig: ''
+    teacherConfig: ''
+    stationConfig:
+      survey: |-
+        {
+          "title": "Rückmeldung zum Labor",
+          "pages": [
+            {
+              "name": "page1",
+              "elements": [
+                { "type": "rating", "name": "eindruck", "title": "Wie gefällt Ihnen dieses Remote-Labor?", "rateMax": 5 },
+                { "type": "comment", "name": "ideen", "title": "Wofür könnten Sie so ein Labor an Ihrer Schule nutzen?" }
+              ]
+            }
+          ]
+        }
+      allowRetake: false
+    showInCustom: station
+    width: half
+    height: tall
+    id: 5f7a1d84-6c2b-4e39-9d16-8b3e0c5a7f21
+communicationConfig: null
+keepUrlConfig: true
