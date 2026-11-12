@@ -172,9 +172,9 @@ __Nicht nur Informatik__
 | Fach       | Beispiele für Remote-Labore und LabSets                                      | Stand                    |
 | ---------- | ---------------------------------------------------------------------------- | ------------------------ |
 | Informatik | Calliope mini, Arduino, fahrende Roboter                                     | Hochschullabore vorhanden |
-| Physik     | Sensorkennlinien, Distanzmessung, Analog-Digital-Wandlung                     | Hochschullabore vorhanden |
+| Physik     | Sensorkennlinien, Distanzmessung, Analog-Digital-Wandlung                     | geplant                   |
 | Biologie   | Umweltsensorik (Licht, Temperatur, pH), Gewächshaus mit Portalroboter am BSZ | Gewächshaus am BSZ vorhanden, Rest geplant |
-| Chemie     | elektrochemische Messungen, Chromatographie, Spektroskopie                   | geplant, mit der Technischen Chemie |
+| Chemie     | elektrochemische Messungen, Chromatographie, Spektroskopie                   | erste Labore der Technischen Chemie vorhanden |
 
 </section>
 
