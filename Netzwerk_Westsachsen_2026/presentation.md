@@ -160,8 +160,6 @@ __Was wir daraus gelernt haben__
 
 So entsteht ein __verteiltes Labor-Netzwerk__: Schulen betreiben eigene Labore, nutzen die Angebote anderer und lernen voneinander. Alle Materialien sind __OER__ und schulübergreifend nutzbar.
 
-> __Ziel:__ mindestens 10 aktiv beteiligte Schulen innerhalb der Projektlaufzeit.
-
 </section>
 
     {{2}}
@@ -184,13 +182,6 @@ __Nicht nur Informatik__
 
 <div class="flex-child" style="min-width: 250px;">
 
-__Beispielhafte Baukästen__
-
-- Robotik
-- Mikrocontroller
-- Umweltsensorik
-- elektrochemische Messungen
-
 __Der Weg zum eigenen Labor__
 
 1. Workshop im RoboLab Freiberg: Setups kennenlernen und ausprobieren
@@ -210,8 +201,6 @@ __Zu jedem LabSet gehören__
 - Aufgabenblätter und Video-Tutorials
 
 alles unter __CC BY 4.0__ und auf Git-Plattformen veröffentlicht.
-
-> Die Lehrkräfte begleiten als Coaches und erhalten vom Projektteam technische und didaktische Unterstützung.
 
 </div>
 
@@ -244,7 +233,6 @@ __Beispiele__
 - Informatik GY Kl. 7, Informatiksysteme: Calliope als EVA-System
 - Biologie OS Kl. 9, Grundlagen der Ökologie: abiotische Faktoren digital messen
 - Physik GY: verbindliche Schülerexperimente mit digitaler Messwerterfassung
-- Besondere Lernleistung (BELL) und Komplexe Lernleistung: ein eigenes LabSet bauen und für andere öffnen
 
 </div>
 
@@ -283,35 +271,7 @@ __Nicht jedes Labor heißt programmieren.__ Dieselbe Hardware trägt vier Stufen
 | Terminal, serieller Monitor                         | Code auf das Gerät laden und ausführen         |
 | Whiteboard, Chat, Umfrage                           | Zusammenarbeit und Rückmeldung                 |
 
-### Ein Labor = eine Textdatei
-
-```yaml   esp32_lab_de.yaml (Ausschnitt)
-name: Arduino Nano ESP32 Labor
-modules:
-  - url: https://edrys-labs.github.io/module-markdown-it/index.html
-    config:
-      content: |-
-        # Willkommen im Remote-Labor ...
-    showInCustom: lobby
-
-  - url: https://edrys-labs.github.io/module-monaco-editor/
-    config:
-      language: cpp
-      runCommand: execute
-    showInCustom: station
-
-  - url: https://edrys-labs.github.io/module-streaming/index.html
-    stationConfig:
-      video: true
-    showInCustom: station
-
-  - url: https://edrys-labs.github.io/module-pyxtermjs/index.html
-    stationConfig:
-      workflow: arduino-nano-esp32
-    showInCustom: station
-```
-
-    {{1}}
+    {{2}}
 <section>
 
 Was daraus folgt:
@@ -347,7 +307,7 @@ Klassisch mit zentralem Server               Direkt von Browser zu Browser
 | das Gerät per USB und eine Webcam                     | Portfreigaben in der Firewall           |
 | bei Bedarf Docker für die Programmierwerkzeuge        | Installation auf den Schülergeräten     |
 
-> Keine Benutzerkonten, keine zentrale Datenhaltung. Damit können Schulen ihre Labore selbst betreiben. In sehr restriktiven Schulnetzen prüfen wir die Verbindung gemeinsam vor Ort.
+> Damit können Schulen ihre Labore selbst betreiben. In sehr restriktiven Schulnetzen prüfen wir die Verbindung gemeinsam vor Ort.
 
 </section>
 
@@ -395,7 +355,7 @@ url === ""
 
 ## Laufende Labore in Freiberg
 
-Diese Stationen laufen dauerhaft in unserem RoboLab. Sie sind der Ausgangspunkt für die zentralen Remote-Labore im Projekt.
+Diese Stationen aus unserer Hochschullehre laufen dauerhaft im RoboLab. Sie sind der Ausgangspunkt für die zentralen Remote-Labore und ihre Schulvarianten.
 
 <section class="flex-container">
 
@@ -425,19 +385,6 @@ https://edrys-labs.github.io/?/classroom/sEHRNUR9TnhA8wYs
 
 > __Und mit einer ganzen Klasse?__ Eine Station kann immer nur eine Person gleichzeitig programmieren. Deshalb arbeiten die Lernenden zuerst im Simulator und gehen dann an die Station. Mehrere gleiche Stationen laufen parallel, alle anderen schauen im Kamerabild zu. Für die zentralen Labore entsteht ein Buchungssystem.
 
-Diese Labore stammen aus unserer Hochschullehre. Die Schulvarianten mit gestuften Aufgaben entstehen im Projekt gemeinsam mit den Partnerschulen.
-
-## Der Fahrplan
-
-| Phase                                   | Was passiert                                                                                       |
-| --------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| __1. Anpassen__                         | Hochschul-Labore an Schulcurricula und Niveaustufen anpassen, Begleitmaterial mit Partnerschulen entwickeln und erproben |
-| __2. Ausbauen__                         | Remote-Labore an TU Bergakademie und BSZ ausbauen, LabSets an Schulen etablieren, Projektarbeiten begleiten, Workshops und Fortbildungen im RoboLab |
-| __3. Teilen__                           | Laborbeschreibungen als OER in einem durchsuchbaren Repository, Anbindung an OPAL Schule, LernSax und MeSax |
-
-    {{1}}
-> Fortbildungen für Lehrkräfte und Lernende bietet das Institut für Informatik der TU Bergakademie Freiberg auch nach Projektende an.
-
 ## Was bedeutet das für eine Schule?
 
 | Frage                      | Antwort                                                                                         |
@@ -460,6 +407,7 @@ Diese Labore stammen aus unserer Hochschullehre. Die Schulvarianten mit gestufte
 | __3. Demo-Setups zeigen__        | im Interview und in Workshops ein Remote-Labor live vorführen, mit Fachkarten zu Beispielexperimenten je Fach |
 | __4. Erproben und verbessern__   | Schulvarianten der Labore und LabSet-Prototypen mit Lernenden und Lehrkräften testen: Was ist verständlich, wo hakt die Technik? |
 | __5. Wirkung prüfen__            | Befragungen vor und nach der Arbeit mit den Laboren, Interviews, datenschutzsensibel erfasste Nutzungsdaten   |
+| __6. Teilen__                    | Labore und Materialien als OER in einem durchsuchbaren Repository, angebunden an OPAL Schule, LernSax und MeSax |
 
     {{1}}
 <section>
@@ -472,34 +420,13 @@ __Woran wir uns messen:__ mindestens 10 aktive Schulpartnerschaften, 15 veröffe
 
 ## Mitmachen
 
-<section class="flex-container">
-
-<div class="flex-child" style="min-width: 250px;">
-
-__Was Ihre Schule bekommt__
-
-- einsatzfertige Remote-Labore mit Begleitmaterial
-- Workshops im RoboLab Freiberg für Lernende und Lehrkräfte
-- LabSets, die an der Schule bleiben
-- technische und didaktische Begleitung
-- ein Netzwerk von Schulen, die voneinander lernen
-
-</div>
-
-<div class="flex-child" style="min-width: 250px;">
-
 __Was wir uns wünschen__
 
-- Lehrkräfte, die Remote-Labore im Unterricht, in AGs oder an Projekttagen erproben
+- Lehrkräfte aller MINT-Fächer, die Remote-Labore im Unterricht, in AGs oder an Projekttagen erproben
 - Ideen für Experimente aus Ihrem Unterricht
 - Schulen, die ein eigenes LabSet aufbauen und für andere öffnen
-- Lehrkräfte aller MINT-Fächer, nicht nur Informatik
 
-__Der erste Schritt:__ Sprechen Sie uns an. Wir klären mit einem kurzen Fragebogen und einem Gespräch Ihre Fächer, Themen und Klassenstufen und laden Sie zu einem Workshop ein.
-
-</div>
-
-</section>
+> __Der erste Schritt:__ Sprechen Sie uns an. Wir klären mit einem kurzen Fragebogen und einem Gespräch Ihre Fächer, Themen und Klassenstufen und laden Sie zu einem Workshop ein.
 
     {{1}}
 <section>
@@ -532,6 +459,3 @@ __Ansprechpartner an der TU Bergakademie Freiberg__
 | Prof. Dr. Martin Bertau  | Institut für Technische Chemie                             | martin.bertau@chemie.tu-freiberg.de      |
 
 __Projektteam:__ Dr. Ines Aubel (Institut für Technische Chemie), Florian Richter, Jihad Hyadi
-
-<!-- class="highlight" -->
-> __Projekt:__ MyRemoteMINT – Eigene Labore für Schülerinnen und Schüler im ländlichen Raum, Initiative Digitale Schule Sachsen (07/2026–06/2028), TU Bergakademie Freiberg
