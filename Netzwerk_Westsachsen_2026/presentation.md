@@ -149,6 +149,7 @@ __Was wir daraus gelernt haben__
 
 > MyRemoteMINT bringt die Remote-Labore aus der Hochschullehre in die Schulen und ergänzt sie um __mobile Hardware-Baukästen__, die __LabSets__.
 
+<!-- data-type="none" -->
 | Ebene                                      | Wer betreibt das Labor?                     | Wofür?                                                                       |
 | ------------------------------------------ | ------------------------------------------- | ---------------------------------------------------------------------------- |
 | __1. Individuelle Remote-Labore__          | Schülerinnen und Schüler, zu Hause          | eigene Fragestellungen, angeregt durch Interesse oder Unterricht             |
@@ -167,6 +168,7 @@ So entsteht ein __verteiltes Labor-Netzwerk__: Schulen betreiben eigene Labore, 
 
 __Nicht nur Informatik__
 
+<!-- data-type="none" -->
 | Fach       | Beispiele für Remote-Labore und LabSets                                      | Stand                    |
 | ---------- | ---------------------------------------------------------------------------- | ------------------------ |
 | Informatik | Calliope mini, Arduino, fahrende Roboter                                     | Hochschullabore vorhanden |
@@ -214,6 +216,7 @@ alles unter __CC BY 4.0__ und auf Git-Plattformen veröffentlicht.
 
 <div class="flex-child" style="min-width: 250px;">
 
+<!-- data-type="none" -->
 | Fach              | Anknüpfungspunkte |
 | ----------------- | ----------------: |
 | Physik            |                44 |
@@ -243,6 +246,7 @@ __Beispiele__
 
 __Nicht jedes Labor heißt programmieren.__ Dieselbe Hardware trägt vier Stufen:
 
+<!-- data-type="none" -->
 | Stufe                          | Was die Lernenden tun                                        | Typische Klassen |
 | ------------------------------ | ------------------------------------------------------------ | ---------------- |
 | 1. Beobachten                  | Experiment starten, Live-Bild und Messwerte verfolgen        | 5–8              |
@@ -262,6 +266,9 @@ __Nicht jedes Labor heißt programmieren.__ Dieselbe Hardware trägt vier Stufen
 ![Remote-Labor zur Distanzmessung in Edrys lite](./edrys_distanzlabor.jpg "Remote-Labor zur Distanzmessung: Code-Editor, Kamerabild, Terminal und Aufgaben in einem Browserfenster")
 
     {{1}}
+<section>
+
+<!-- data-type="none" -->
 | [Module](https://github.com/edrys-labs) (Beispiele) | Zweck                                          |
 | --------------------------------------------------- | ---------------------------------------------- |
 | Markdown, LiaScript                                 | Anleitungen, Aufgaben, Quiz                    |
@@ -270,6 +277,8 @@ __Nicht jedes Labor heißt programmieren.__ Dieselbe Hardware trägt vier Stufen
 | Kamerastream                                        | Das echte Gerät beobachten                     |
 | Terminal, serieller Monitor                         | Code auf das Gerät laden und ausführen         |
 | Whiteboard, Chat, Umfrage                           | Zusammenarbeit und Rückmeldung                 |
+
+</section>
 
     {{2}}
 <section>
@@ -301,6 +310,7 @@ Klassisch mit zentralem Server               Direkt von Browser zu Browser
     {{1}}
 <section>
 
+<!-- data-type="none" -->
 | Eine Station braucht ...                              | ... und keinen                          |
 | ----------------------------------------------------- | --------------------------------------- |
 | einen Rechner mit Chrome oder Edge                    | eigenen Server oder Cloud-Vertrag       |
@@ -387,6 +397,7 @@ https://edrys-labs.github.io/?/classroom/sEHRNUR9TnhA8wYs
 
 ## Was bedeutet das für eine Schule?
 
+<!-- data-type="none" -->
 | Frage                      | Antwort                                                                                         |
 | -------------------------- | ----------------------------------------------------------------------------------------------- |
 | __Technik__                | Browser auf vorhandenen Geräten; für eine eigene Station ein Rechner, das Gerät und eine Webcam |
@@ -400,6 +411,7 @@ https://edrys-labs.github.io/?/classroom/sEHRNUR9TnhA8wYs
 
 > MyRemoteMINT entwickelt nicht am Schreibtisch, sondern gemeinsam mit den Partnerschulen und in mehreren Runden.
 
+<!-- data-type="none" -->
 | Schritt                          | Was wir tun                                                                                                   |
 | -------------------------------- | ------------------------------------------------------------------------------------------------------------- |
 | __1. Lehrpläne auswerten__       | Anknüpfungspunkte in den sächsischen Lehrplänen für sechs Fächer und drei Schularten (abgeschlossen)          |
@@ -439,6 +451,7 @@ Welches Experiment aus Ihrem Fach würden Sie gern aus der Ferne nutzen oder mit
 
 ## Kontakt und Links
 
+<!-- data-type="none" -->
 | Angebot                         | Link                                  |
 | ------------------------------- | ------------------------------------- |
 | Edrys lite und alle Labore      | https://edrys-labs.github.io          |
@@ -453,6 +466,7 @@ __Labore selbst starten__ (es entsteht jeweils ein neuer, eigener Klassenraum):
 
 __Ansprechpartner an der TU Bergakademie Freiberg__
 
+<!-- data-type="none" -->
 | Name                     | Institut                                                   | E-Mail                                   |
 | ------------------------ | ---------------------------------------------------------- | ---------------------------------------- |
 | Prof. Dr. Sebastian Zug  | Institut für Informatik, Softwaretechnologie und Robotik   | sebastian.zug@informatik.tu-freiberg.de  |
