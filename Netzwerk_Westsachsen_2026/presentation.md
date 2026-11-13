@@ -402,22 +402,24 @@ __Woran wir uns messen:__ mindestens 10 aktive Schulpartnerschaften, 15 veröffe
 
 </section>
 
-## Mitmachen
+## Ihre Ideen sind gefragt
 
-__Was wir uns wünschen__
+> Die spannendsten Experimente liegen oft zwischen den Fächern. Wir sammeln Ideen für __fächerübergreifende Remote-Labore__.
 
-- Lehrkräfte aller MINT-Fächer, die Remote-Labore im Unterricht, in AGs oder an Projekttagen erproben
-- Ideen für Experimente aus Ihrem Unterricht
-- Schulen, die ein eigenes LabSet aufbauen und für andere öffnen
+Zum Beispiel:
 
-> __Der erste Schritt:__ Sprechen Sie uns an. Wir klären mit einem kurzen Fragebogen und einem Gespräch Ihre Fächer, Themen und Klassenstufen und laden Sie zu einem Workshop ein.
+- Ein Mikrocontroller misst den pH-Wert im Schulteich, Biologie deutet die Werte, Informatik wertet die Langzeitdaten aus.
+- Ein Roboter pflegt das Gewächshaus, Licht und Feuchte steuern das Wachstum.
+- Eine Titration läuft remote in der Chemie, die Messkurve entsteht im eigenen Programm.
 
     {{1}}
 <section>
 
-Welches Experiment aus Ihrem Fach würden Sie gern aus der Ferne nutzen oder mit anderen Schulen teilen?
+Welches Experiment verbindet für Sie mehrere Fächer?
 
 [[___ ___ ___]]
+
+> Sprechen Sie uns an, heute am Stand oder per E-Mail.
 
 </section>
 
