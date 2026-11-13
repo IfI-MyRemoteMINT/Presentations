@@ -5,11 +5,11 @@ meta:
   logo: >-
     https://raw.githubusercontent.com/edrys-labs/lab-arduino-basics/main/logo.jpeg
   description: >-
-    Ein erstes Remote-Labor mit einem echten Arduino Nano ESP32: C++-Code im
-    Browser schreiben, kompilieren, auf das Board laden und das Ergebnis über
-    Kamera und seriellen Monitor beobachten.
+    Lernmaterial in drei Schritten: Grundlagen zu Mikrocontroller und RGB-LED
+    (Room 1), ein Lauflicht im LiaScript-Simulator (Room 2) und ein echter
+    Arduino Nano ESP32 mit Kamera und seriellem Monitor (Station).
   selfAssign: true
-  defaultNumberOfRooms: '1'
+  defaultNumberOfRooms: '2'
 members:
   teacher: []
   student: []
@@ -19,22 +19,19 @@ modules:
       content: |-
         # Willkommen im Remote-Labor mit dem Arduino Nano ESP32
 
-        Liebe Teilnehmerinnen und Teilnehmer,
+        In diesem Labor programmieren Sie einen echten Mikrocontroller: einen **Arduino Nano ESP32**, der an einem Laptop hier im Raum angeschlossen ist. Sie gehen dabei in drei Schritten vor. Die Räume finden Sie links im Menü.
 
-        dieses Labor gibt Ihnen direkten Zugriff auf einen echten Mikrocontroller: einen **Arduino Nano ESP32**, der an einem Laptop hier im Raum angeschlossen ist.
+        | Schritt | Ort       | Was Sie tun                                                       |
+        | ------- | --------- | ----------------------------------------------------------------- |
+        | 1       | Room 1    | Verstehen: Was ist ein Mikrocontroller, wie funktioniert eine RGB-LED? |
+        | 2       | Room 2    | Ausprobieren: Ein Lauflicht im Simulator programmieren            |
+        | 3       | Station   | Anwenden: Das Programm auf dem echten Board laufen lassen         |
 
-        **So funktioniert es**
+        Alles läuft im Browser, Sie müssen nichts installieren.
 
-        1. Öffnen Sie links im Menü die **Station**.
-        2. Ändern Sie den C++-Code im Editor und drücken Sie den **Run**-Knopf.
-        3. Die Station kompiliert den Code und lädt ihn auf das Board. Das dauert etwa 15 Sekunden.
-        4. Beobachten Sie das Board über die **Kamera** und lesen Sie seine Ausgaben im **Terminal**.
+        > An der Station kann immer nur eine Person das Board programmieren. Wenn gerade jemand dort arbeitet, schauen Sie kurz zu oder bereiten Sie sich in Room 2 vor.
 
-        Alles läuft im Browser, Sie müssen nichts installieren. Die Station selbst ist nur ein Browserfenster und ein kleiner Docker-Container auf einem Laptop.
-
-        > Es kann immer nur eine Person das Board programmieren. Wenn gerade jemand an der Station arbeitet, warten Sie bitte kurz und schauen gemeinsam zu.
-
-        _Ihr CrossLab-Team, TU Bergakademie Freiberg_
+        _MyRemoteMINT, TU Bergakademie Freiberg_
     studentConfig:
       content: ''
     teacherConfig:
@@ -45,6 +42,66 @@ modules:
     width: full
     height: huge
     id: 4c7e2a91-5b3d-4f08-8a6c-1e9d3b7f2a54
+  - url: https://edrys-labs.github.io/module-markdown-it/index.html
+    config:
+      content: |-
+        # Room 1: Was steckt im Board?
+
+        ## Ein Mikrocontroller ist ein kleiner Computer
+
+        Ein Mikrocontroller vereint Prozessor, Speicher und Ein- und Ausgänge auf einem einzigen Chip. Er steckt in Waschmaschinen, Fahrradtachos und Wetterstationen. Er arbeitet immer nach demselben Prinzip:
+
+        | Eingabe                         | Verarbeitung                    | Ausgabe                          |
+        | ------------------------------- | ------------------------------- | -------------------------------- |
+        | Sensoren, Taster, Messwerte     | das Programm, das Sie schreiben | LEDs, Motoren, Text am Bildschirm |
+
+        Das ist das **EVA-Prinzip**: Eingabe, Verarbeitung, Ausgabe.
+
+        ## Unser Board: Arduino Nano ESP32
+
+        Auf dem Board sitzt eine **RGB-LED**. Sie besteht aus drei winzigen LEDs in Rot, Grün und Blau. Leuchten mehrere gleichzeitig, mischen sich die Farben: Rot und Grün ergeben Gelb, alle drei ergeben Weiß.
+
+        Jede der drei LEDs hängt an einem eigenen **Pin**, also einem Anschluss des Mikrocontrollers. Das Programm schaltet einen Pin auf `HIGH` (Spannung an) oder `LOW` (Spannung aus).
+
+        > **Besonderheit:** Die RGB-LED dieses Boards ist **LOW-aktiv**. Sie leuchtet, wenn der Pin auf `LOW` steht, und ist aus bei `HIGH`. Das liegt an der Schaltung auf dem Board, nicht am Programm.
+
+        ## Ein Arduino-Programm hat zwei Teile
+
+        ```cpp
+        void setup() {
+          // läuft einmal beim Start: Pins einrichten
+        }
+
+        void loop() {
+          // läuft danach immer wieder: LEDs schalten, warten, ...
+        }
+        ```
+
+        Mit `delay(700)` wartet das Programm 700 Millisekunden. Mit `Serial.println("Text")` schickt es Text an den Rechner, den Sie im Terminal sehen.
+
+        ## Weiter
+
+        In **Room 2** probieren Sie ein Lauflicht im Simulator aus, ganz ohne Hardware.
+    studentConfig:
+      content: ''
+    teacherConfig:
+      content: ''
+    stationConfig:
+      content: ''
+    showInCustom: Room 1
+    width: full
+    height: huge
+    id: 1d7c3e95-8a2f-4b61-9c04-7e5a2b8f3d16
+  - url: https://edrys-labs.github.io/module-liascript/
+    config:
+      course: https://raw.githubusercontent.com/IfI-MyRemoteMINT/Presentations/main/Netzwerk_Westsachsen_2026/esp32_simulation.md
+    studentConfig: ''
+    teacherConfig: ''
+    stationConfig: ''
+    showInCustom: Room 2
+    width: full
+    height: huge
+    id: 6b2f8d41-3c9e-4a75-b1d8-0f4e7c2a9b63
   - url: https://edrys-labs.github.io/module-monaco-editor/
     config:
       editorId: station
@@ -115,11 +172,13 @@ modules:
   - url: https://edrys-labs.github.io/module-markdown-it/index.html
     config:
       content: |-
-        # Aufgaben
+        # Aufgaben an der Station
+
+        Hier läuft Ihr Programm auf dem echten Board. Beachten Sie: Die RGB-LED ist **LOW-aktiv** und die Pins heißen `LED_RED`, `LED_GREEN`, `LED_BLUE`.
 
         > **Aufgabe 1**: Starten Sie den Beispielcode. Beobachten Sie die RGB-LED in der Kamera und die Farbnamen im Terminal. Passen beide zusammen?
 
-        > **Aufgabe 2**: Lassen Sie die LED schneller blinken und ergänzen Sie einen vierten Zustand, in dem alle drei Farben gleichzeitig leuchten. Welche Farbe sehen Sie?
+        > **Aufgabe 2**: Übertragen Sie Ihre Lösung aus Room 2 auf das Board: schneller blinken und ein vierter Zustand, in dem alle drei Farben gleichzeitig leuchten. Welche Farbe sehen Sie im Kamerabild?
 
         > **Aufgabe 3**: Lassen Sie die LED `SOS` morsen (`... --- ...`): kurz = 200 ms, lang = 600 ms, Pause zwischen den Buchstaben = 600 ms. Geben Sie jeden Buchstaben auf dem seriellen Monitor aus.
 
