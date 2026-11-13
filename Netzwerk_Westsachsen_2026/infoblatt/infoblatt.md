@@ -34,7 +34,7 @@ einen Link: **keine Installation, keine Anmeldung, kein eigener Server.**
 \end{minipage}\hfill
 \begin{minipage}[t]{0.31\textwidth}\raggedright
   {\color{tubafblue}\bfseries Unser Vorgehen}\\[0.2em]
-  {\small Gemeinsam mit den Partnerschulen: Bedarfe per Fragebogen und Interview erheben, Demo-Setups zeigen, Labore erproben und verbessern, Wirkung durch Befragungen prüfen.}
+  {\small Gemeinsam mit 10 Partnerschulen: Bedarfe per Fragebogen und Interview erheben, Demo-Setups zeigen, Labore erproben und verbessern, Wirkung durch Befragungen prüfen.}
 \end{minipage}\par
 \vspace{0.3em}
 ```
