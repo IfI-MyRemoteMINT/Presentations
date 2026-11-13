@@ -61,10 +61,11 @@ einen Link: **keine Installation, keine Anmeldung, kein eigener Server.**
 \vspace{0.2em}
 ```
 
-## Mitmachen
+## Ihre Ideen sind gefragt
 
-Ob einzelne Experimente im Unterricht, eine AG, ein Projekttag oder ein eigenes
-LabSet: Wir suchen Schulen aus allen MINT-Fächern, die mitgestalten. Sprechen Sie uns gern an.
+Ein Mikrocontroller misst den pH-Wert im Schulteich, ein Roboter pflegt das
+Gewächshaus: Wir sammeln Ideen für **fächerübergreifende Remote-Labore**.
+Sprechen Sie uns an!
 
 ```{=latex}
 \vfill
