@@ -210,36 +210,20 @@ alles unter __CC BY 4.0__ und auf Git-Plattformen veröffentlicht.
 
 ### Passt das in den Lehrplan?
 
-> Wir haben die sächsischen Lehrpläne für Informatik, Physik, Chemie, Biologie, Biotechnik und Technik/Computer an Oberschule, Gymnasium und Beruflichem Gymnasium nach Anknüpfungspunkten durchsucht.
+> Wir haben die sächsischen Lehrpläne für Informatik, Physik, Chemie und Biologie an Oberschule, Gymnasium und Beruflichem Gymnasium daraufhin gelesen, wo Remote-Labore und LabSets passen.
 
-<section class="flex-container">
-
-<div class="flex-child" style="min-width: 250px;">
+- __Starke Anknüpfungspunkte:__ Der Lehrplan verlangt digitale Messungen, echte Hardware oder Geräte, die an vielen Schulen fehlen.
+- __Weitere Anknüpfungspunkte:__ Das Thema passt, ein Labor ergänzt den Unterricht.
 
 <!-- data-type="none" -->
-| Fach              | Anknüpfungspunkte |
-| ----------------- | ----------------: |
-| Physik            |                44 |
-| Informatik        |                38 |
-| Chemie            |                26 |
-| Biologie          |                21 |
-| Biotechnik        |                 4 |
-| Technik/Computer  |                 4 |
-| __Summe__         |           __137__ |
+| Fach       | Starke Anknüpfungspunkte (Beispiele)                                                    | Weitere Anknüpfungspunkte (Beispiele)                            |
+| ---------- | --------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| Informatik | GY Kl. 10 Robotik: Einplatinencomputer, Sensoren, Aktoren; Komplexaufgaben mit eigener Hardware | GY Kl. 7 Informatiksysteme: Calliope als EVA-System              |
+| Physik     | GY Kl. 8: Kennlinien als Schülerexperiment mit digitaler Erfassung                      | GY Kl. 10: Schwingungen digital erfassen, Resonanzkurve          |
+| Chemie     | GY Kl. 10: Titration digital; GK 12: elektrochemische Reaktionen                         | GY Kl. 8: Leitfähigkeit und Wärmeentwicklung digital messen      |
+| Biologie   | OS Kl. 9 Ökologie: abiotische Faktoren digital messen; GY Kl. 6: Mikroskopieren          | GY Kl. 9: Zellatmung, CO₂-Abgabe und Wärme digital               |
 
-</div>
-
-<div class="flex-child" style="min-width: 250px;">
-
-__Beispiele__
-
-- Informatik GY Kl. 7, Informatiksysteme: Calliope als EVA-System
-- Biologie OS Kl. 9, Grundlagen der Ökologie: abiotische Faktoren digital messen
-- Physik GY: verbindliche Schülerexperimente mit digitaler Messwerterfassung
-
-</div>
-
-</section>
+Für eigene LabSet-Projekte bieten sich außerdem die Besondere Lernleistung (BELL) und die Komplexe Lernleistung an.
 
     {{1}}
 <section>
@@ -402,7 +386,7 @@ https://edrys-labs.github.io/?/classroom/sEHRNUR9TnhA8wYs
 <!-- data-type="none" -->
 | Schritt                          | Was wir tun                                                                                                   |
 | -------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| __1. Lehrpläne auswerten__       | Anknüpfungspunkte in den sächsischen Lehrplänen für sechs Fächer und drei Schularten (abgeschlossen)          |
+| __1. Lehrpläne auswerten__       | starke und weitere Anknüpfungspunkte in den sächsischen MINT-Lehrplänen an drei Schularten (abgeschlossen)  |
 | __2. Bedarfe erheben__           | an den Partnerschulen: kurzer Online-Fragebogen zu Schule, Unterricht und Ausstattung, danach ein Interview mit Lehrkräften |
 | __3. Demo-Setups zeigen__        | im Interview und in Workshops ein Remote-Labor live vorführen, mit Fachkarten zu Beispielexperimenten je Fach |
 | __4. Erproben und verbessern__   | Schulvarianten der Labore und LabSet-Prototypen mit Lernenden und Lehrkräften testen: Was ist verständlich, wo hakt die Technik? |

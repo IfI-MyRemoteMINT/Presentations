@@ -26,7 +26,7 @@ einen Link: **keine Installation, keine Anmeldung, kein eigener Server.**
 \vspace{0.2em}
 \noindent\begin{minipage}[t]{0.31\textwidth}\raggedright
   {\color{tubafblue}\bfseries Für Lehrkräfte}\\[0.2em]
-  {\small Labore für Informatik, Physik, Chemie und Biologie, gestuft vom Beobachten bis zum eigenen Experiment. 137 Anknüpfungspunkte in den sächsischen Lehrplänen. Workshops und Begleitung.}
+  {\small Labore für Informatik, Physik, Chemie und Biologie, gestuft vom Beobachten bis zum eigenen Experiment und abgestimmt auf die sächsischen Lehrpläne, die wir dafür ausgewertet haben. Workshops und Begleitung.}
 \end{minipage}\hfill
 \begin{minipage}[t]{0.31\textwidth}\raggedright
   {\color{tubafblue}\bfseries Für Schulleitungen}\\[0.2em]
